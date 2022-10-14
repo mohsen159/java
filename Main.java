@@ -12,4 +12,22 @@ public class Main {
       System.out.println(right.matches(regex) + " " + mistake.matches(regex) + " \n");
       //io.close();
     }
+    static void exo2() {
+      int year = 20182;
+      String regex = "^[a-z]+,[a-z]+," + year + "$";
+      String mistake = "mohamed,boulahbal,2019\nmohssen,boulahbal,2018\nsbbben,bbbal,20182\n";
+      BufferedReader br = new BufferedReader(new StringReader(mistake));
+      String line = null;
+      try {
+        while ((line = br.readLine()) != null) {
+  
+          if (line.matches(regex)) {
+            System.out.println(line);
+          }
+  
+        }
+      } catch (IOException e) {
+        e.printStackTrace();
+      }
+    }
   }
