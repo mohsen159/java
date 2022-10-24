@@ -23,7 +23,7 @@ class main {
     }
 
     public static void exo02() {
-        String operation = "1+0+9+00+11+12+00+14+9";
+        String operation = "1+0+9+00+11+12+00+16+9";
         operation = operation.replaceAll("[+][0]+", "");
         System.out.println(operation);
         int r = 0;
@@ -32,9 +32,7 @@ class main {
             r += Integer.parseInt(arr[i]);
         }
         System.out.println(r);
-
     }
-
     public static void exo03() {
         String year = "2015";
         String prenom = "ben";
